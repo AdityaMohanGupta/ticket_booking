@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    color: red;
+}
+div{
+    padding-top: 10px;
+    background-color: beige;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    margin-left: 610px;
+}

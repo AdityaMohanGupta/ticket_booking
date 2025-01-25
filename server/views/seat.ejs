@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/seat.css">
+</head>
+<body>
+    <!--Scrool to top-->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop" id="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- <div class="header-wrapper"> -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/#movies">MOVIES</a></li>
+                    <li><a href="/#special">CONCERTS</a></li>
+                    <li><a href="/#sports">SPORTS</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/ai">BOLETO AI</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+                <div class="cta">
+                    <a href="/auth/logout" class="btn">Log out</a>
+                </div>
+                <div class="header-bar d-lg-none">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <!-- banner Sectionn -->
+    <section class="banner-section">
+        <div class="actual-banner"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="titleee">
+                    <span class="d-block"></span> 
+                    Movie
+                    <span class="words-wrapper">
+                        <b class="auto-type"></b>
+                    </span>
+                </h1>
+                <p>Mathura, Vrindavan || Hindi-2D</p>
+            </div>
+        </div>
+    </section>
+    <!-- banner Sectionn ends -->
+    <div class="thick">
+        <!-- Back Button -->
+        <div class="back-button">
+            <button onclick="goBack()"><< Back</button>
+        </div>
+
+        <!-- Date and Time Selection -->
+        <div class="date-time">
+            <span id="date-display">MON, DEC 12 2024</span>
+            <select id="time-select">
+                <option>09:15</option>
+                <option>15:45</option>
+                <option>16:00</option>
+                <option>16:15</option>
+                <option>20:15</option>
+            </select>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <span id="timer">05:00</span>
+            <p>Mins Left</p>
+        </div>
+    
+    </div>
+
+
+
+    <div class="screen-container">
+        <!-- Title with Lines -->
+        <div class="screen-title">
+            <div class="line small"></div>
+            <h2>SCREEN</h2>
+            <div class="line large"></div>
+        </div>
+
+        <!-- Screen Image -->
+        <div class="screen-image">
+            <img src="../assests/screen.png" alt="Screen">
+        </div>
+
+        <div class="section">
+            <div class="screen-line" >
+                <div class="line small"></div>
+                <h2 class="special">SILVER PLUS</h2>
+                <div class="line large"></div>
+            </div>
+            <div class="rows">
+                <div class="row">
+                    <h4 id="space">G</h4>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G1">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G2">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G3">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G4">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G5">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G6">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G7">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G8">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G9">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G11">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G13">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="G14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>G</h4>
+                </div>
+                <div class="row">
+                    <h4 id="space">F</h4>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F1">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F2">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F3">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F4">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F5">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F6">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F7">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F8">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F9">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F11">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F13">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat.png" alt="Seat" class="seat-img" data-name="F14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>F</h4>
+                </div>
+            </div>
+            <div class="screen-line" >
+                <div class="line small"></div>
+                <h2 class="green">PLATINUM PLUS</h2>
+                <div class="line large"></div>
+            </div>
+            <div class="rows">
+                <div class="row1">
+                    <h4 id="space">E</h4>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E01,E02">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E03,E04">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E05,E06">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E07,E08">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E09,E10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E11,E12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="E13,E14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>E</h4>
+                </div>
+                <div class="row1">
+                    <h4 id="space">D</h4>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D01,D02">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D03,D04">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D05,D06">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D07,D08">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D09,D10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D11,D12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="D13,D14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>D</h4>
+                </div>
+                <div class="row1">
+                    <h4 id="space">C</h4>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C01,C02">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C03,C04">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C05,C06">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C07,C08">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C09,C10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C11,C12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="C13,C14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>C</h4>
+                </div>
+                <div class="row1">
+                    <h4 id="space">B</h4>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B01,B02">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B03,B04">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B05,B06">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B07,B08">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B09,B10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B11,B12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="B13,B14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>B</h4>
+                </div>
+                <div class="row1">
+                    <h4 id="space">A</h4>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A01,A02">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A03,A04">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A05,A06">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A07,A08">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="mark">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A09,A10">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="seat2">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A11,A12">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <div class="seat2" id="space">
+                        <div class="seat-container">
+                            <img src="../assests/seat02.png" alt="Seat" class="seat-img" data-name="A13,A14">
+                            <span class="seat-label" style="display:none;"></span> <!-- Seat label will appear here -->
+                        </div>
+                    </div>
+                    <h4>A</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="finall">
+        <div class="overlay"></div>
+        <div class="content">
+            
+
+            <div class="text-div">
+                <p>Your Choosed Seat</p>
+                <p id="second" class="secondd">---</p>
+            </div>
+            
+
+            <div class="amount-div">
+                <p>Total Price</p>
+                <p id="second" class="secondd2">&#8377; 00</p>
+            </div>
+
+            <div class="button-div">
+                <form onsubmit="proceedToCheckout(event)">
+                    <button class="action-button">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="photoo">
+            <div class="newslater">
+                <div class="banner">
+                    <div class="newslater-wrapper">
+                        <h2 class="cate">Subscribe to Boleto </h2>
+                        <h1 class="title">TO GET EXCLUSIVE BENIFITS</h1>
+                        <form class="newslater-form">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Your Email Address">
+                                <button type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <p>We respect your privacy, so we never share your info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seprate">
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/adityamohan.gupta.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AdityaMoha83182" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-mohan-gupta-768b28259/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aditya2004mohan@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you."><i class="fab fa-google"></i></a>
+                    <a href="https://www.instagram.com/aditya_mohan_gupta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024. All Rights Reserved By <span class="brand">Boleto</span></p>
+                <div class="footer-links">
+                    <a href="/about">About</a>
+                    <a href="/termsuse">Terms Of Use</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <!-- <a href="#">FAQ</a> -->
+                    <!-- <a href="#">Feedback</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/seat.js"></script>
+</body>
+</html>

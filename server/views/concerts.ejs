@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/concerts.css">
+</head>
+<body>
+    <!--Scrool to top-->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop" id="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- <div class="header-wrapper"> -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/#movies">MOVIES</a></li>
+                    <li><a href="/#special">CONCERTS</a></li>
+                    <li><a href="/#sports">SPORTS</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/ai">BOLETO AI</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+                <div class="cta">
+                    <a href="/auth/logout" class="btn">Log out</a>
+                </div>
+                <div class="header-bar d-lg-none">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <!-- banner Sectionn -->
+    <section class="banner-section">
+        <div class="actual-banner"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="titleee">
+                    <span class="d-block"></span> 
+                    VENUE
+                    <span class="words-wrapper">
+                        <b class="auto-type"></b>
+                    </span>
+                </h1>
+                <p>GREEN PARK || CONCERTS</p>
+            </div>
+        </div>
+    </section>
+    <!-- banner Sectionn ends -->
+    <div class="thick">
+        <!-- Back Button -->
+        <div class="back-button">
+            <button onclick="goBack()"><< Back</button>
+        </div>
+
+        <!-- Date and Time Selection -->
+        <div class="date-time">
+            <span id="date-display">MON, DEC 12 2024</span>
+            <select id="time-select">
+                <option>09:15</option>
+                <option>15:45</option>
+                <option>16:00</option>
+                <option>16:15</option>
+                <option>20:15</option>
+            </select>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <span id="timer">05:00</span>
+            <p>Mins Left</p>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+
+
+    <div class="pricing-container">
+        <h2 class="heading">SIMPLE PRICING</h2>
+        <h1 class="subheading">BOOK TICKETS</h1>
+        <p class="description">
+            Flexible Zone Booking: Tailored Seating for Every Concert Experience
+        </p>
+        <div class="cards">
+            <div class="card">
+                <h3 class="card-title">Best View</h3>
+                <p class="price">&#8377;100</p>
+                <p class="seats">Total Seats: <span>900</span></p>
+                <button class="btn">PROCEED</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Comfort Zone</h3>
+                <p class="price">&#8377;500</p>
+                <p class="seats">Total Seats: <span>900</span></p>
+                <button class="btn">PROCEED</button>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Single Tickets</h3>
+                <p class="price">&#8377;1000</p>
+                <p class="seats">Total Seats: <span>900</span></p>
+                <button class="btn">PROCEED</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="finall">
+        <div class="overlay"></div>
+        <div class="content">
+            
+
+            <div class="text-div">
+                <p>Your Choosed Zone</p>
+                <p id="second" class="secondd">---</p>
+            </div>
+            
+
+            <div class="amount-div">
+                <p>Total Price</p>
+                <p id="second" class="secondd2">&#8377; 00</p>
+            </div>
+
+            <div class="button-div">
+                <form action="/movies/seat/checkout">
+                    <button class="action-button">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="photoo">
+            <div class="newslater">
+                <div class="banner">
+                    <div class="newslater-wrapper">
+                        <h2 class="cate">Subscribe to Boleto </h2>
+                        <h1 class="title">TO GET EXCLUSIVE BENIFITS</h1>
+                        <form class="newslater-form">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Your Email Address">
+                                <button type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <p>We respect your privacy, so we never share your info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seprate">
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/adityamohan.gupta.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AdityaMoha83182" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-mohan-gupta-768b28259/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aditya2004mohan@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you."><i class="fab fa-google"></i></a>
+                    <a href="https://www.instagram.com/aditya_mohan_gupta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024. All Rights Reserved By <span class="brand">Boleto</span></p>
+                <div class="footer-links">
+                    <a href="/about">About</a>
+                    <a href="/termsuse">Terms Of Use</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <!-- <a href="#">FAQ</a> -->
+                    <!-- <a href="#">Feedback</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/concerts.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f2f5ff;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background-color: #0a1e5e;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #c1d1ff;
+}
+
+/* Section Styling */
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #0a1e5e;
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+section h2 {
+    color: #0a1e5e;
+    font-size: 1.8em;
+    border-bottom: 2px solid #ffa500;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contact Details Styling */
+#contact-details p, #contact-details a {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact-link {
+    color: #0a1e5e;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #ffa500;
+    text-decoration: underline;
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0a1e5e;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #ffa500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #e69500;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0a1e5e;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    section {
+        margin: 20px;
+        padding: 15px;
+    }
+}

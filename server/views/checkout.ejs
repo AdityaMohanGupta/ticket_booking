@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Plan</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+    <!--Scrool to top-->
+    <div class="overlay"></div>
+    <a href="#" class="scrollToTop" id="scrollToTop">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <!-- <div class="header-wrapper"> -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="/assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/#movies">MOVIES</a></li>
+                    <li><a href="/#special">CONCERTS</a></li>
+                    <li><a href="/#sports">SPORTS</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/ai">BOLETO AI</a></li>
+                    <li><a href="/contact">CONTACT</a></li>
+                </ul>
+                <div class="cta">
+                    <a href="/auth/logout" class="btn">Log out</a>
+                </div>
+                <div class="header-bar d-lg-none">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+            <!-- </div> -->
+        </nav>
+    </header>
+
+    <!-- banner Sectionn -->
+    <section class="banner-section">
+        <div class="actual-banner"></div>
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="titleee">
+                    CHECKOUT
+                    <span class="words-wrapper">
+                        <b class="auto-type"></b>
+                    </span>
+                </h1>
+                <p>PAYMENTS METHORDS || UPI,CARDS</p>
+            </div>
+        </div>
+    </section>
+    <!-- banner Sectionn ends -->
+    <div class="thick">
+        <!-- Back Button -->
+        <div class="back-button">
+            <button onclick="goBack()"><< Back</button>
+        </div>
+
+        <!-- Date and Time Selection -->
+        <div class="date-time">
+            <span id="date-display">MON, DEC 12 2024</span>
+            <select id="time-select">
+                <option>09:15</option>
+                <option>15:45</option>
+                <option>16:00</option>
+                <option>16:15</option>
+                <option>20:15</option>
+            </select>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown">
+            <span id="timer">05:00</span>
+            <p>Mins Left</p>
+        </div>
+    
+    </div>
+
+
+
+
+
+
+    <div class="checkout">
+        <!-- Boleto Member Section -->
+        <div class="member-section">
+            <h3>Already a Boleto Member?</h3>
+            <p>Subscribe to earn points and make booking easier!</p>
+            <button class="sign-in-btn"><i class="fas fa-user"></i>Subscribe</button>
+        </div>
+
+        <!-- Contact Details Section -->
+        <div class="contact-details">
+            <h3>Share your Contact Details</h3>
+            <div class="form">
+                <div class="input-group">
+                    <!-- <label>Full Name</label> -->
+                    <input type="text" placeholder="Enter your Full Name">
+                </div>
+                <div class="input-group">
+                    <!-- <label>Enter your Mail</label> -->
+                    <input type="email" placeholder="Enter your Email">
+                </div>
+                <div class="input-group">
+                    <!-- <label>Enter your Phone Number</label> -->
+                    <input type="tel" placeholder="Enter your Phone Number">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Promo Code Section -->
+        <div class="promo-code-section">
+            <h3>Promo Code</h3>
+            <div class="form">
+                <div class="input-group">
+                    <!-- <label>Please Enter Promo Code</label> -->
+                    <div class="input-verify">
+                        <input class="inp" type="text" placeholder="Enter Your Promo Code">
+                        <button class="verify-btn">VERIFY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Booking Summary Section -->
+        <div class="booking-summary">
+            <h3>BOOKING SUMMARY</h3>
+            <ul>
+                <div class="information">
+                    <div><span>PVR</span> <span class="arrow">&#8594;</span> <span class="value">Hindi-3D</span></div>
+                    <div><span>Seat no.</span> <span class="arrow">&#8594;</span> <span class="value">B1,B2</span></div>
+                    <div><span>Date</span> <span class="arrow">&#8594;</span> <span class="value">10 SEP TUE</span></div>
+                    <div><span>Time</span> <span class="arrow">&#8594;</span> <span class="value">11:00 PM</span></div>
+                </div>
+                
+
+                <li><span>Tickets</span> <span>&#8377;1000</span></li>
+                <li><span>Combos</span> <span>&#8377;57</span></li>
+                <li><span>Food & Beverage</span><span>&#8377;57</span></li>
+                <li><span>GST</span><span>&#8377;57</span></li>
+            </ul>
+            <button class="continue-btn" id="checkout-button">PROCEED</button>
+        </div>
+    </div>
+
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="photoo">
+            <div class="newslater">
+                <div class="banner">
+                    <div class="newslater-wrapper">
+                        <h2 class="cate">Subscribe to Boleto </h2>
+                        <h1 class="title">TO GET EXCLUSIVE BENIFITS</h1>
+                        <form class="newslater-form">
+                            <div class="input-wrapper">
+                                <input type="email" placeholder="Your Email Address">
+                                <button type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                        <p>We respect your privacy, so we never share your info</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seprate">
+            <div class="footer-top">
+                <div class="logo">
+                    <a href="#">
+                        <img src="/assests/footer-logo.png" alt="Boleto Logo" class="logo-image">
+                    </a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/adityamohan.gupta.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/AdityaMoha83182" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/aditya-mohan-gupta-768b28259/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:aditya2004mohan@gmail.com?subject=Hello&body=I%20would%20like%20to%20contact%20you."><i class="fab fa-google"></i></a>
+                    <a href="https://www.instagram.com/aditya_mohan_gupta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024. All Rights Reserved By <span class="brand">Boleto</span></p>
+                <div class="footer-links">
+                    <a href="/about">About</a>
+                    <a href="/termsuse">Terms Of Use</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <!-- <a href="#">FAQ</a> -->
+                    <!-- <a href="#">Feedback</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripePublicKey = "<%= stripePublicKey %>";
+    </script>
+    <script src="/js/checkout.js"></script>
+</body>
+</html>

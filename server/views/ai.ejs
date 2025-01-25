@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask AI</title>
+    <link rel="stylesheet" href="/css/ai.css">
+</head>
+<body>
+    <header>
+        <h1>Ask AI</h1>
+        <p>Submit a question below and get an AI-powered response</p>
+    </header>
+    
+    <section id="ask-form">
+        <h2>Submit Your Question</h2>
+        <form id="questionForm" action="/ai" method="post">
+            <label for="question">Question:</label>
+            <textarea class="write" id="question" name="write" rows="4" required placeholder="Type your question here..."></textarea>
+            <button type="submit" class="btn">Ask AI</button>
+        </form>
+    </section>
+
+    <section id="ai-response">
+        <h2>AI's Response</h2>
+        <div id="responseContainer">
+            <p>
+                <% if (result && result.text) { %>
+                    <%= result.text %>
+                <% } else { %>
+                    Your response will appear here.
+                <% } %>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Boleto. All rights reserved.</p>
+    </footer>
+</body>
+</html>
