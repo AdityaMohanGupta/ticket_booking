@@ -99,10 +99,12 @@ window.addEventListener('resize', () => {
 
 
 
-
+let skipBeforeUnload = false;
 const checkoutButton = document.getElementById('checkout-button');
 
 checkoutButton.addEventListener('click', () => {
+
+    skipBeforeUnload = true;
     // Make a request to the backend to create a Stripe checkout session
     fetch('/create-checkout-session', {
         method: 'POST',
@@ -154,6 +156,10 @@ console.log("--",seatName);
 
 // Handle page unload
 window.addEventListener('beforeunload', () => {
+    if (skipBeforeUnload) {
+        console.log("Skipping beforeunload handler due to Stripe checkout.");
+        return; // Do not execute the unload logic
+    }
     fetch('/movies/seat/delete', {
         method: 'POST',
         headers: {
